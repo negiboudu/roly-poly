@@ -147,7 +147,7 @@ createStage stage =
 
 gametitle : String
 gametitle =
-    "Corocoro"
+    "roly-poly"
 
 
 stageclearMsg : String
