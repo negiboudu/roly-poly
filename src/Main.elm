@@ -48,12 +48,12 @@ init =
 
 startPosition : ( Float, Float )
 startPosition =
-    ( -200, -200 )
+    ( -160, -200 )
 
 
 goalPosition : Float
 goalPosition =
-    200
+    160
 
 
 createStage : Int -> List ( Float, Float )
@@ -72,30 +72,29 @@ createStage stage =
             ]
 
         4 ->
-            [ ( 200, -200 )
-            , ( 200, -170 )
-            , ( 200, -140 )
-            , ( 200, -110 )
-            , ( 200, -80 )
-            , ( 130, -170 )
-            , ( 100, -170 )
-            , ( 70, -170 )
-            , ( 70, -140 )
-            , ( 70, -110 )
-            , ( 70, -80 )
+            [ ( 160, -200 )
+            , ( 160, -170 )
+            , ( 160, -140 )
+            , ( 160, -110 )
+            , ( 160, -80 )
+            , ( 90, -170 )
+            , ( 60, -170 )
+            , ( 30, -170 )
+            , ( 30, -140 )
+            , ( 30, -110 )
+            , ( 30, -80 )
             ]
 
         5 ->
-            [ ( 200, -200 )
-            , ( 200, -170 )
-            , ( 200, -140 )
-            , ( 200, -110 )
+            [ ( 160, -200 )
+            , ( 160, -170 )
+            , ( 160, -140 )
+            , ( 160, -110 )
+            , ( 160, -80 )
             , ( -110, -170 )
             , ( -90, -170 )
-            , ( -30, -130 )
-            , ( -10, -130 )
-            , ( 50, -90 )
-            , ( 70, -90 )
+            , ( 10, -90 )
+            , ( 30, -90 )
             ]
 
         6 ->
@@ -127,18 +126,18 @@ createStage stage =
             ]
 
         7 ->
-            [ ( 180, -185 )
-            , ( 180, -155 )
-            , ( 180, -125 )
-            , ( 180, -95 )
-            , ( 180, -65 )
-            , ( 180, -35 )
-            , ( 180, -10 )
-            , ( 130, -170 )
-            , ( 70, -130 )
-            , ( 100, -60 )
-            , ( 20, -80 )
-            , ( -40, 0 )
+            [ ( 140, -185 )
+            , ( 140, -155 )
+            , ( 140, -125 )
+            , ( 140, -95 )
+            , ( 140, -65 )
+            , ( 140, -35 )
+            , ( 140, -10 )
+            , ( 90, -170 )
+            , ( 30, -130 )
+            , ( 60, -60 )
+            , ( -20, -80 )
+            , ( -80, 0 )
             ]
 
         _ ->
@@ -223,8 +222,9 @@ view computer memory =
 
 runningView : Computer -> Memory -> List Shape
 runningView computer memory =
-    [ words black ("STAGE " ++ String.fromInt memory.stage)
-        |> move -150 200
+    [ rectangle darkBrown computer.screen.width computer.screen.height
+    , words darkGray ("STAGE " ++ String.fromInt memory.stage)
+        |> move -100 100
     , image memory.charactorWidth memory.charactorWidth "./img/roly-poly.png"
         |> move memory.x memory.y
         |> rotate (toFloat memory.angle)

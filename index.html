@@ -6743,31 +6743,30 @@ var $author$project$Main$createStage = function (stage) {
 		case 4:
 			return _List_fromArray(
 				[
-					_Utils_Tuple2(200, -200),
-					_Utils_Tuple2(200, -170),
-					_Utils_Tuple2(200, -140),
-					_Utils_Tuple2(200, -110),
-					_Utils_Tuple2(200, -80),
-					_Utils_Tuple2(130, -170),
-					_Utils_Tuple2(100, -170),
-					_Utils_Tuple2(70, -170),
-					_Utils_Tuple2(70, -140),
-					_Utils_Tuple2(70, -110),
-					_Utils_Tuple2(70, -80)
+					_Utils_Tuple2(160, -200),
+					_Utils_Tuple2(160, -170),
+					_Utils_Tuple2(160, -140),
+					_Utils_Tuple2(160, -110),
+					_Utils_Tuple2(160, -80),
+					_Utils_Tuple2(90, -170),
+					_Utils_Tuple2(60, -170),
+					_Utils_Tuple2(30, -170),
+					_Utils_Tuple2(30, -140),
+					_Utils_Tuple2(30, -110),
+					_Utils_Tuple2(30, -80)
 				]);
 		case 5:
 			return _List_fromArray(
 				[
-					_Utils_Tuple2(200, -200),
-					_Utils_Tuple2(200, -170),
-					_Utils_Tuple2(200, -140),
-					_Utils_Tuple2(200, -110),
+					_Utils_Tuple2(160, -200),
+					_Utils_Tuple2(160, -170),
+					_Utils_Tuple2(160, -140),
+					_Utils_Tuple2(160, -110),
+					_Utils_Tuple2(160, -80),
 					_Utils_Tuple2(-110, -170),
 					_Utils_Tuple2(-90, -170),
-					_Utils_Tuple2(-30, -130),
-					_Utils_Tuple2(-10, -130),
-					_Utils_Tuple2(50, -90),
-					_Utils_Tuple2(70, -90)
+					_Utils_Tuple2(10, -90),
+					_Utils_Tuple2(30, -90)
 				]);
 		case 6:
 			return _List_fromArray(
@@ -6801,18 +6800,18 @@ var $author$project$Main$createStage = function (stage) {
 		case 7:
 			return _List_fromArray(
 				[
-					_Utils_Tuple2(180, -185),
-					_Utils_Tuple2(180, -155),
-					_Utils_Tuple2(180, -125),
-					_Utils_Tuple2(180, -95),
-					_Utils_Tuple2(180, -65),
-					_Utils_Tuple2(180, -35),
-					_Utils_Tuple2(180, -10),
-					_Utils_Tuple2(130, -170),
-					_Utils_Tuple2(70, -130),
-					_Utils_Tuple2(100, -60),
-					_Utils_Tuple2(20, -80),
-					_Utils_Tuple2(-40, 0)
+					_Utils_Tuple2(140, -185),
+					_Utils_Tuple2(140, -155),
+					_Utils_Tuple2(140, -125),
+					_Utils_Tuple2(140, -95),
+					_Utils_Tuple2(140, -65),
+					_Utils_Tuple2(140, -35),
+					_Utils_Tuple2(140, -10),
+					_Utils_Tuple2(90, -170),
+					_Utils_Tuple2(30, -130),
+					_Utils_Tuple2(60, -60),
+					_Utils_Tuple2(-20, -80),
+					_Utils_Tuple2(-80, 0)
 				]);
 		default:
 			return _List_Nil;
@@ -6822,7 +6821,7 @@ var $elm$core$Tuple$second = function (_v0) {
 	var y = _v0.b;
 	return y;
 };
-var $author$project$Main$startPosition = _Utils_Tuple2(-200, -200);
+var $author$project$Main$startPosition = _Utils_Tuple2(-160, -200);
 var $author$project$Main$init = {
 	angle: 0,
 	blockWidth: 20,
@@ -6843,7 +6842,7 @@ var $author$project$Main$init = {
 var $author$project$Main$Ending = {$: 'Ending'};
 var $author$project$Main$Running = {$: 'Running'};
 var $author$project$Main$Goal = {$: 'Goal'};
-var $author$project$Main$goalPosition = 200;
+var $author$project$Main$goalPosition = 160;
 var $author$project$Main$checkGoal = function (memory) {
 	return (_Utils_cmp(memory.x, $author$project$Main$goalPosition) > 0) ? _Utils_update(
 		memory,
@@ -7151,7 +7150,8 @@ var $evancz$elm_playground$Playground$rgb = F3(
 			$evancz$elm_playground$Playground$colorClamp(g),
 			$evancz$elm_playground$Playground$colorClamp(b));
 	});
-var $evancz$elm_playground$Playground$black = $evancz$elm_playground$Playground$Hex('#000000');
+var $evancz$elm_playground$Playground$darkBrown = $evancz$elm_playground$Playground$Hex('#8f5902');
+var $evancz$elm_playground$Playground$darkGray = $evancz$elm_playground$Playground$Hex('#babdb6');
 var $evancz$elm_playground$Playground$darkGrey = $evancz$elm_playground$Playground$Hex('#babdb6');
 var $evancz$elm_playground$Playground$Image = F3(
 	function (a, b, c) {
@@ -7214,13 +7214,14 @@ var $author$project$Main$runningView = F2(
 		return _Utils_ap(
 			_List_fromArray(
 				[
+					A3($evancz$elm_playground$Playground$rectangle, $evancz$elm_playground$Playground$darkBrown, computer.screen.width, computer.screen.height),
 					A3(
 					$evancz$elm_playground$Playground$move,
-					-150,
-					200,
+					-100,
+					100,
 					A2(
 						$evancz$elm_playground$Playground$words,
-						$evancz$elm_playground$Playground$black,
+						$evancz$elm_playground$Playground$darkGray,
 						'STAGE ' + $elm$core$String$fromInt(memory.stage))),
 					A2(
 					$evancz$elm_playground$Playground$rotate,
